@@ -4,9 +4,9 @@ The audited snapshot was committed and pushed on 2026-10-31 at the user's
 explicit request. Initial publication is commit `5a80710`. The original working
 project, game data and private evidence remain outside this public repository.
 
-Read PUBLICATION_CHECK.md, README.md and docs/HELP_WANTED.md before publishing.
-The configured `origin` is
-`https://github.com/TallGaming/Sloppy-MHP3D-Decomp.git`, supplied by the user.
+Read [the current publication contents](README.md) before publishing. The
+maintainer-approved destination is [TallGaming/Sloppy-MHP3RD-Decomp on
+GitHub](https://github.com/TallGaming/Sloppy-MHP3RD-Decomp), branch `main`.
 The initially empty repository was private. It was made public to carry out the
 public-release request, and anonymous API access was verified. The authenticated
 GitHub account was verified as TallGaming. Git is configured locally for this

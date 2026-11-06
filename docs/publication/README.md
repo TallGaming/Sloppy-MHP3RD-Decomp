@@ -1,6 +1,6 @@
 # Public snapshot contents
 
-This is a clean authored-text export of the local research project. It includes
+The initial 2026-10-31 snapshot is an authored-text export of the local research project. It includes
 the source hypotheses, invented fixtures, Python tools/tests and documentation.
 The working repository and its private material were preserved separately.
 
@@ -14,11 +14,21 @@ with historical notices. The current root pages take precedence. Inaccessible
 local evidence links are rendered as explicit local-only artifact references,
 not broken public download links.
 
-SOURCE_EXPORT.json records original authored-file hashes and adapted public-copy
+For the initial snapshot, SOURCE_EXPORT.json records original authored-file hashes and adapted public-copy
 hashes. Game-related bench drafts retain their original bytes. Personal paths
 and current-versus-historical status are adjusted for publication; old evidence
 hashes are not rewritten to manufacture new validation claims.
 
-The final clean-tree test, content/link scan and Git review results are recorded
-in PUBLICATION_CHECK.md. Nothing in that report establishes a game match or
-completes the future 18-negative-test build gate.
+The [initial publication checks](PUBLICATION_CHECK.md) record the original
+clean-tree test, content scan and Git review.
+
+## 2026-11-06 campaign update
+
+The [campaign inventory](../../campaign-source-export/LIBRARY.json) records
+all 1,077 function outcomes and links the archived source files with their
+SHA-256 hashes. The archive contains all 22 verified C sources from the
+campaign and 486 reviewed parked drafts. The remaining 26 parked functions
+appear in the inventory with their drafts kept local. Parked drafts may depend
+on local headers or incomplete types. The private build configuration, game inputs
+and third-party library implementations remain local. See
+[current status](../CURRENT_STATUS.md) for verification and coverage.

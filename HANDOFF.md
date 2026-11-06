@@ -1,46 +1,39 @@
 # Current handoff
 
-The project is public at [TallGaming/Sloppy-MHP3D-Decomp](https://github.com/TallGaming/Sloppy-MHP3D-Decomp)
-at the user's request. Initial publication is commit `5a80710`; anonymous access
-was verified. The original local evidence and tools remain separate. Start with
-[CURRENT_STATUS](docs/CURRENT_STATUS.md) and [HELP_WANTED](docs/HELP_WANTED.md).
+The project is public at [TallGaming/Sloppy-MHP3RD-Decomp](https://github.com/TallGaming/Sloppy-MHP3RD-Decomp).
+The matching campaign is paused with no active assignments. Do not start a new
+matching attempt or convert an isolated result into credit without a new
+maintainer-approved assignment.
+Start with [CURRENT_STATUS](docs/CURRENT_STATUS.md) and
+[HELP_WANTED](docs/HELP_WANTED.md).
 
-The latest completed diagnostic is Bucket 3AL: the same readable key-advance
-method was compiled twice through four unchanged C++/O2 pipelines. All historical
-control objects and new objects repeated exactly. All four complete bodies
-remain NONEXACT against the reviewed 140-byte original.
+The [campaign inventory](campaign-source-export/LIBRARY.json) records 596
+completed functions out of 1,077. The completed set includes 22 verified C
+matches, 62 verified library identifications and 512 parked functions. The audit
+verified timing for 558 attempts and recorded waivers for 38. There are 481
+untouched functions.
 
-| Routine | Status | Plain hypotheses | Commented matching shapes |
-| --- | --- | ---: | ---: |
-| Archive key initializer, 68 bytes | PARKED | 3 | 1 |
-| Archive key advance, 140 bytes | DIAGNOSTIC_NONEXACT | 1 | 0 |
+The private main gate rebuilt the EBOOT byte for byte with 843 credited C
+functions. The required negative checks passed and the gate reported zero
+failures. Its original inputs and evidence remain local.
 
-Totals: five retained game-source drafts, four plain hypotheses, one commented
-matching-shape function, zero register pins, zero empty-asm lines, one parked
-routine, zero credited matches and zero linked-source functions.
+Four generated-switch-table results (`FUN_0885b8cc`, `FUN_0885be6c`,
+`FUN_0885c144`, and `FUN_0885d0b0`) are isolated only and remain parked. They
+do not authorize any new source-matching claim or credit.
 
-Bucket 3AM was deferred before compiler execution when publication became the
-priority. Its invented arithmetic source exists, but its unfinished private
-controller has not been reviewed, tested or run. No capability-matrix result is
-claimed. Signature-rule research is partial; no DiE/PEiD scan was executed.
+The historical compiler identity remains unproved. All 355 known overlay images
+remain unbuilt. Public tests validate safe tooling and invented fixtures only;
+they are distinct from the private main gate. Do not publish private gate
+inputs, raw game/SDK material, original dumps, credentials or local evidence
+paths.
 
-The last full private tooling run was 352 passes with no skips under WSL.
-Later bounded fixture/controller checks are recorded separately. The public
-snapshot has its own clean-export validation report in docs/publication/.
+On Windows, the public tooling suite ran 362 tests, with 360 passes and two
+platform skips.
 
-The public contributor documentation now includes the
-[post-toolchain roadmap](docs/AFTER_TOOLCHAIN.md),
-[matching guide](docs/MATCHING_GUIDE.md), and
-[task record template](docs/MATCHING_TASK_TEMPLATE.md), plus a PR template.
-These document future checkpoints and existing matching rules; no compiler,
-gate, source integration or new game-function attempt was implemented by them.
-
-Next useful contributions are source-backed historical PSP compiler/linker
-provenance, analysis of the two source contexts, or reproducible invented-fixture
-results. Preserve fixed project-wide diagnostic profiles; never tune flags per
-function. Preserve complete byte comparisons and the
-matching-before-port decision. No game toolchain is selected and the full-game
-gate/18 negative tests remain unfinished.
+Useful public contributions remain source-backed historical PSP
+compiler/linker/ABI provenance and reproducible invented-fixture results.
+Preserve fixed project-wide profiles; never tune flags per function. Preserve
+complete byte comparisons and the matching-before-port decision.
 
 The detailed dated working history is preserved in
 [the historical handoff](docs/history/HANDOFF_2026-10-31.md). Current instructions

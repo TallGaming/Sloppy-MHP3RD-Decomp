@@ -3,12 +3,14 @@
 We need source-backed help identifying the historical build pipeline for
 Monster Hunter Portable 3rd, Japanese PSP **ULJM05800 v1.02**, and understanding
 two small nonmatching source drafts. [Current status](CURRENT_STATUS.md) records
-what was actually tested. There are zero credited matches, no linked reconstructed
-source, no passing full-game gate and no historical toolchain lock.
+the current pause and its limits. Campaign accounting is reconciled and fresh
+private local verification passed, but this help request makes no new matching
+claim. The historical toolchain remains unlocked.
 
 Please focus on documented compiler/linker/ABI evidence and readable source
 context. We will not retune flags separately for a function. Original game bytes,
-SDK/compiler binaries, keys and assets are not included or requested.
+SDK/compiler binaries, keys, assets, private gate inputs, original dumps,
+credentials and local evidence paths are not included or requested.
 
 ## Evidence and limits
 

@@ -42,8 +42,9 @@ strings do not establish ownership of an unknown implementation.
 A function earns match credit only after the clean complete game/module build is
 byte-identical and the required eighteen negative gate checks prove source
 participation and reject stale objects, failed compilation, missing inputs and
-undeclared assembly fallback. That gate does not exist yet. Exact isolated
-objects, passing tooling tests and copied assembly earn no source match credit.
+undeclared assembly fallback. The current main EBOOT gate runs in the private
+workspace. The public tooling suite runs on invented inputs. Exact isolated
+objects earn no source match credit.
 
 ## Reviewable work
 

@@ -6,27 +6,31 @@ rebuilds all game executables/code modules byte for byte, preserving assets.
 This repository contains research tools and diagnostic source drafts, not a
 playable game, complete decompilation or native port.
 
-As of the publication preparation checkpoint on 2026-10-31:
+The 2026-11-06 campaign checkpoint is recorded in the
+[public function inventory](../campaign-source-export/LIBRARY.json).
 
 | Measure | Status |
 | --- | --- |
-| Credited game matches | 0 |
-| Functions linked from reconstructed source | 0 |
-| Historical compiler/assembler/linker/global flags | Unresolved; not locked |
-| Complete all-code inventory | Unproven |
-| Clean full-game byte-identical build gate | Not implemented/passing |
-| Required 18 negative game-gate checks | Not implemented/passing |
-| Original game/module runtime testing | Not performed |
-| Last complete tooling suite | 352 tests passed in WSL, zero skips |
-| Later bounded checks | Separate; not a new full-suite count or game gate |
+| Campaign state | Paused with no active assignments |
+| Completed attempts | 596 of 1,077, including 22 verified C matches, 62 verified library identifications and 512 parked functions |
+| Attempt timing | 558 verified and 38 waived |
+| Untouched functions | 481 |
+| Private main EBOOT gate | Byte-identical at 843 credited C functions, with all required negative checks passing and zero failures |
+| Historical compiler, assembler, linker and global flags | Unresolved |
+| Known overlay images | All 355 remain unbuilt |
+| Public tooling suite on Windows | 362 tests run, with 360 passes and two platform skips |
 
-Reference preparation recovered the known 355 overlay images twice locally,
-with complete repeat equality. That known set is not a proved denominator for
-all game code. Supplemental module preparation and bounded import metadata are
-also local research, without ownership or runtime claims. Game images, extracted
-code/data, disassembly, compiler/SDK binaries and private evidence are not shipped.
+The private main gate uses non-public inputs and evidence. Public tests exercise
+safe tooling and invented fixtures; they cannot establish a game build or the
+private-gate pass reported above. Game images, extracted code/data, disassembly,
+compiler/SDK binaries, original dumps, credentials and local evidence paths are
+not shipped. The known 355-overlay set is not a proved all-code denominator.
 
-## Current source blockers
+The four generated-switch-table results are `FUN_0885b8cc`, `FUN_0885be6c`,
+`FUN_0885c144`, and `FUN_0885d0b0`. They remain isolated and parked pending
+placement support for compiler-generated tables in the main build.
+
+## Earlier archive-key investigation
 
 The linked executable's `.comment` contains `MW MIPS C Compiler (2.4.1.01)`.
 This records toolchain involvement somewhere in image construction; it does not
@@ -70,9 +74,9 @@ A source-rule audit of Detect-It-Easy found that its relevant ELF MWCC rule
 searches `.comment`, rather than recognizing MIPS instructions. No scanner was
 installed or executed; no signature hit or new attribution is claimed.
 
-Counters remain four plain hypotheses across two routines, five retained game
-source drafts, one parked routine, one function with a commented matching shape,
-zero register pins and zero empty-asm lines. Four compiler profiles and fresh
+This earlier archive-key investigation recorded four plain hypotheses across
+two routines, five retained drafts, one parked routine, one commented matching
+shape, zero register pins and zero empty-asm lines. Four compiler profiles and fresh
 repeat runs do not count as additional source hypotheses.
 
 ## Future port scope

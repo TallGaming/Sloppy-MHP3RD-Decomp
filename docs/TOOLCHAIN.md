@@ -2,10 +2,15 @@
 
 # Toolchain investigation
 
+> Current campaign note (2026-11-06): matching is paused with reconciled
+> accounting and a passing fresh private main gate. This page records historical
+> diagnostics; it does not identify the original compiler or claim new match
+> credit. Public fixture tests are distinct from the private main gate.
+
 No game compiler or optimization flags are locked yet. Never change flags to
 match an individual function once the project configuration is established.
 
-## Current Bucket 3M result
+## Historical Bucket 3M result
 
 The [tracing-feasibility checkpoint](BUCKET_03M_CHECKPOINT.md) maps twenty
 diagnostic markers to 27 decoded relocated operands, with independent real
@@ -17,7 +22,7 @@ neutrality is validated. No source/flags/tools changed, and no source was compil
 The compiler remains unlocked. Yakumo's HD static recompilation supplies archive
 and port-reference leads, not an original compiler. Stop for output review.
 
-## Earlier Bucket 3L result
+## Historical Bucket 3L result
 
 The [eleven-build C++ archive comparison](BUCKET_03L_CHECKPOINT.md) finds two
 output groups under the same fixed O2/source: tested builds 121–151 produce
@@ -29,7 +34,7 @@ pass with zero skips. No source, prior profile, comparator or flags changed,
 and no new tool was downloaded. Compiler attribution remains unresolved.
 Stop at the output checkpoint before another experiment.
 
-## Earlier Bucket 3K result
+## Historical Bucket 3K result
 
 The [GCC package comparison](BUCKET_03K_CHECKPOINT.md) finds no gain from the
 newly pinned 1.3.1 package over existing 1.7.1. At O1/O2/O3 all fourteen complete
@@ -40,7 +45,7 @@ explicit backend and pinned GNU assembler settings were used; neither complete
 SDK driver pipeline was reconstructed. All 271 tooling tests pass with no skips.
 The toolchain remains unlocked; stop at the output checkpoint.
 
-## Earlier Bucket 3J result
+## Historical Bucket 3J result
 
 The [invented direct/grouped fixture pair](BUCKET_03J_CHECKPOINT.md) produces
 identical whole objects and 100-byte functions in both fresh trials under
@@ -49,7 +54,7 @@ alone changes nothing here. Full disassemblies and bounded static analysis are
 retained separately. All 258 tooling tests pass with no skips. No game source,
 compiler settings or attribution conclusion changed. Await output review.
 
-## Earlier Bucket 3I result
+## Historical Bucket 3I result
 
 The [single natural archive-key candidate](BUCKET_03I_CHECKPOINT.md) is NONEXACT:
 100-byte complete function versus the 68-byte target in both fresh trials,
@@ -61,7 +66,7 @@ without attributing its cause to a particular flag, compiler revision or source
 context. No source revision or flag search occurred. All 239 tooling tests pass.
 The toolchain remains unlocked and full-game match credit remains zero.
 
-## Earlier Bucket 3H result
+## Historical Bucket 3H result
 
 The approved [fixed language-mode comparison](BUCKET_03H_CHECKPOINT.md) used
 unmodified MW219, the unchanged fourteen-probe source and O2. Both C and C++
@@ -72,7 +77,7 @@ C++ target compilation. Both final trials agree; 226 tooling tests pass.
 No language, full toolchain, game-build flags or match credit is selected.
 The linked-versus-object metadata gap and translation-unit context remain open.
 
-## Earlier Bucket 3G result
+## Historical Bucket 3G result
 
 The [same-series pipeline comparison](BUCKET_03G_CHECKPOINT.md) is complete.
 Our raw MW219 compiler matches the pre-patch SHA-1 guard declared by the pinned
@@ -83,7 +88,7 @@ differences. No settings were adopted or new toolchain experiment executed.
 The proposed fixed C/C++ mode comparison was separately approved as Bucket 3H.
 The toolchain remains unlocked. All prior evidence remains unchanged.
 
-## Earlier Bucket 3D result
+## Historical Bucket 3D result
 
 The [fixed-source family comparison](COMPILER_FAMILY_COMPARISON.md) adds one
 GCC and one SNC candidate to the old Metrowerks 219 control. All twelve declared
@@ -94,7 +99,7 @@ No source, profile flags or comparator checks were changed to obtain scores.
 The original toolchain remains unidentified and unlocked. See
 [BUCKET_03D_CHECKPOINT.md](BUCKET_03D_CHECKPOINT.md) for review and limits.
 
-## Earlier Bucket 3 result
+## Historical Bucket 3 result
 
 The [reviewed compiler investigation](COMPILER_INVESTIGATION.md) supersedes the
 initial eight-probe experiment below. It compares eleven pinned Metrowerks PSP

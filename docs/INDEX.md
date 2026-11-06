@@ -1,8 +1,8 @@
 # Documentation index
 
-Start with [current status](CURRENT_STATUS.md), [the help request](HELP_WANTED.md), and [public reproduction](REPRODUCIBILITY.md).
+Start with [current status](CURRENT_STATUS.md), [the help request](HELP_WANTED.md), and [public reproduction](REPRODUCIBILITY.md). The matching campaign is paused with reconciled accounting and a passing private main gate; dated checkpoint pages are historical and do not establish that result.
 
-The pages below preserve authored research history. Their dated local results are not fresh public CI results, and local evidence paths are not downloads. Current status and root instructions take precedence.
+The pages below preserve authored research history. Their dated local results are not fresh public CI results, and private evidence paths are not downloads. Current status and public-safety rules take precedence.
 
 ## Current entry points
 
@@ -10,8 +10,9 @@ The pages below preserve authored research history. Their dated local results ar
 - [HELP_WANTED.md](HELP_WANTED.md)
 - [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
 - [THIRD_PARTY_REFERENCES.md](THIRD_PARTY_REFERENCES.md)
-- [Publication review](publication/README.md)
-- [Publication checks](publication/PUBLICATION_CHECK.md)
+- [Campaign inventory](../campaign-source-export/LIBRARY.json)
+- [Publication contents](publication/README.md)
+- [Initial publication checks](publication/PUBLICATION_CHECK.md)
 - [Public handoff](../HANDOFF.md)
 - [Contributing](../CONTRIBUTING.md)
 - [After compiler identification](AFTER_TOOLCHAIN.md)
