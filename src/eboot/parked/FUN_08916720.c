@@ -1,0 +1,5 @@
+/* FUN_08916720: recursively compose transforms for a two-child hierarchy.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 6. Hierarchy roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned int u32;extern short *D_089f6174[];void FUN_08875a3c(void*,void*,void*);
+void FUN_08916720(int context,u8 *node,u8 *table,short mode,void *fallback);
+void FUN_08916720(int context,u8 *node,u8 *table,short mode,void *fallback){u32 local[16];int index,i;if(mode==0)FUN_08875a3c(node+0x50,node+0x10,node+0x90);else{index=D_089f6174[mode][*(unsigned short *)(node+0x116)];if(index<1){for(i=0;i<16;i++)local[i]=(i%5)==0?0x3f800000:0;for(i=0;i<4;i++)local[12+i]=*(u32 *)(node+0xc0+i*4);}else if(index<0x40){u8 *source=table+index*0x280;for(i=0;i<16;i++)local[i]=*(u32 *)(source+0x90+i*4);}else FUN_08875a3c(local,node+0x170,fallback);FUN_08875a3c(node+0x50,node+0x10,local);}if(*(u8 **)(node+0x14c)!=0)FUN_08916720(context,*(u8 **)(node+0x14c),table,mode,local);if(*(u8 **)(node+0x148)!=0)FUN_08916720(context,*(u8 **)(node+0x148),table,mode,fallback);}

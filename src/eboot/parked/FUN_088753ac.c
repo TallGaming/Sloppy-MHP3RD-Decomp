@@ -1,0 +1,3 @@
+/* Purpose: initialize graphics command state and launch its worker. */
+extern void FUN_08960d28(int,int,int);extern void FUN_08960d10(int);extern void FUN_0887526c(void*);extern void FUN_08875318(void*);extern unsigned int FUN_08960cf8(void*,int,unsigned int,int);extern void FUN_08960cc8(unsigned int,int);extern unsigned int FUN_08960cf0(void*);
+void FUN_088753ac(unsigned int*object){unsigned int local[4]={0,0,0x08875808,0};FUN_08960d28(0,0x1e0,0x110);FUN_08960d10(0x400);object[0]=0;FUN_0887526c(object);FUN_08960cc8(FUN_08960cf8((void*)0x089c9d1c,0,0xffffffff,0),0);object[0x1c066]=FUN_08960cf0(local);FUN_08875318(object);FUN_0887526c(object);*(unsigned int*)0x08aaceb4=1;*((unsigned char*)(object+0x1c067))=0;}

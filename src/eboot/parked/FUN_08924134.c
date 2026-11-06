@@ -1,0 +1,4 @@
+/* FUN_08924134: update a menu cursor from global direction bits.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 12. Menu roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;typedef unsigned int u32;extern u8 D_09bb7a70;extern void *D_08a31df0;void FUN_08922ddc(void*);void FUN_0883bac8(void*,int);void FUN_0891f2e8(void*,int);
+int FUN_08924134(u8 *state,u32 input){int result=2;FUN_08922ddc(state);if((input&0x4000)==0){u8 count=state[0x4bb],cursor=state[0x4ba];u16 *direction=(u16 *)(state+0x4b4);if(count>1){int next=(signed char)cursor;if((D_09bb7a70&0x80)!=0){if(next==0)cursor=count;cursor--;next=(signed char)cursor;*direction=0x80;}else if((D_09bb7a70&0x20)!=0){if(next<count-1){cursor++;next=(signed char)cursor;}else{cursor=0;next=0;}*direction=0x20;}if((signed char)state[0x4ba]!=next){state[0x4ba]=cursor;FUN_0883bac8(D_08a31df0,4);}}FUN_0891f2e8(state,0);result=0;}return result;}

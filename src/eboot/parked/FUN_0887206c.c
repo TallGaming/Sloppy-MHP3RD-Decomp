@@ -1,0 +1,2 @@
+/* Purpose: update a small random state, clearing its special identifier when needed. */
+extern unsigned int FUN_088e62f0(void*,int);extern int FUN_0886624c(void*,unsigned short);extern void FUN_0886eda4(void*,int);void FUN_0887206c(void*o){unsigned char*p=(unsigned char*)o+0x5149;if((*(unsigned int*)((unsigned char*)o+0x5fbf8)&8)==0){*p=(FUN_088e62f0(*(void**)0x09bc1ed8,1)&3)+1;}else if(FUN_0886624c(o,0x54)==0){FUN_0886eda4(o,0x54);*p=0;}else{unsigned int r=FUN_088e62f0(*(void**)0x09bc1ed8,1);*p=r%5;}}

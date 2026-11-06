@@ -1,0 +1,2 @@
+/* Purpose: refresh six dependent subsystems after clearing identifier state. */
+extern void*D_08aace80;extern void FUN_0886f1e0(void*,int);extern void FUN_0887206c(void*);extern void FUN_0885f474(void*);extern void FUN_0887fde8(void*);extern void FUN_0886e0e8(void*);extern void FUN_08870698(void*);void FUN_08872150(void*o){FUN_0886f1e0(D_08aace80,0x1f9);FUN_0887206c(o);FUN_0885f474(*(void**)0x08a3345c);FUN_0887fde8(*(void**)0x08ab1568);FUN_0886e0e8(o);FUN_08870698(o);}

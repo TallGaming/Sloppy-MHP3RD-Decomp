@@ -1,0 +1,3 @@
+/* Dispatch one RPC command while maintaining the shared critical-section depth. */
+typedef unsigned int u32;extern int D_08a31df8,D_08a31df4;extern char D_09bc1ed0,D_089671cc[],D_089671d4[],D_089671dc[];int FUN_08960a50(void);void FUN_08960a68(int);u32 FUN_08899318(int,void*,int);void FUN_0880d4b4(char*,...);
+u32 FUN_08899bc8(int unused,u32*cmd,u32*out){u32 c=*cmd,r=0;if((c>0xfffffff&&c<0x10000005)||(c>0x10000005&&c<0x1000000e)){D_08a31df8++;if(D_08a31df8==1)D_08a31df4=FUN_08960a50();r=FUN_08899318(0,cmd,0x40);if(D_08a31df8&&--D_08a31df8==0)FUN_08960a68(D_08a31df4);}else if(c&&c!=0x30000000&&D_09bc1ed0&&(FUN_0880d4b4(D_089671cc),D_09bc1ed0)&&(FUN_0880d4b4(D_089671d4),D_09bc1ed0)){FUN_0880d4b4(D_089671dc,c);}*out=r;return r;}

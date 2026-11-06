@@ -1,0 +1,3 @@
+/* FUN_088f043c: reset a controller object and its small record tables. PARKED: exact length retains fourteen differences. */
+typedef unsigned char u8;typedef unsigned short u16;void FUN_08903534(void*);void FUN_08903280(void*);
+void FUN_088f043c(u8*p){int i,j;u8*q;*(int*)p=0;p[4]=0;*(int*)(p+0xb0)=0;FUN_08903534(p+0xb4);FUN_08903280(p+0x1f8);p[0x43c]=0;p[0x43d]=0;p[0xa6]=0;*(int*)(p+0xa8)=0;*(int*)(p+0xac)=0;q=p+0x43e;i=0;do{i++;q[0]=0;q[1]=0xff;*(u16*)(q+2)=0;*(u16*)(q+4)=0xffff;*(u16*)(q+6)=0;q[8]=0;q+=10;}while(i!=2);i=0;q=p;do{u16*r=(u16*)(q+6);j=0;do{j++;r[0]=0;r[1]=0xffff;r+=2;}while(j!=8);i++;q+=0x20;}while(i!=5);p[0x454]=0;p[0x452]=0;p[0x453]=0;}

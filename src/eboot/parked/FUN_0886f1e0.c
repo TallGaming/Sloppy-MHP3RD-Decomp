@@ -1,0 +1,2 @@
+/* Purpose: clear a signed-index bit and notify active external subsystems. */
+extern void*D_08aace80;extern void*D_09bb7a80;extern void FUN_088b6544(void*);typedef void(*N)(void*);void FUN_0886f1e0(void*o,int i){int a=i<0?i+15:i;unsigned short*b=(unsigned short*)((unsigned char*)o+(a>>4)*2+0x984);*b&=~(1u<<(i&15));if((*(unsigned int*)((unsigned char*)D_08aace80+0x60474)&1)!=0){((N)0x09d24c7c)(*(void**)0x09e6aad8);FUN_088b6544(D_09bb7a80);}}

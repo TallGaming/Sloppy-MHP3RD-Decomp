@@ -1,0 +1,3 @@
+/* Purpose: reset wireless configuration and install one six-byte identity. */
+extern void FUN_088ebb10(void*,int,unsigned int);extern void FUN_088ebb18(void*,const void*,unsigned int);
+void FUN_0887ca48(const void*id){FUN_088ebb10((void*)0x08aad3dc,0,0x180);FUN_088ebb10((void*)0x08aad55c,0,0x0c);FUN_088ebb10((void*)0x08aad3d0,0,0x0c);FUN_088ebb18((void*)0x08aad3dc,id,6);*(unsigned short*)0x08aad3f2=0xaaaa;*(unsigned int*)0x08aad564=0x08ab0d68;*(unsigned int*)0x08aad3d8=0x08aad568;*(unsigned int*)0x08aad3ec=1;*(unsigned int*)0x08aad3f0=2;*(unsigned int*)0x08aad560=0x800;*(unsigned int*)0x08aad3d4=0x3800;}

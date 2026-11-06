@@ -1,0 +1,3 @@
+/* Copy and offset a nine-word rectangle command before drawing it. */
+typedef short s16; typedef unsigned int u32; extern void*D_09beb0bc;void FUN_088ff8f0(void*,void*,u32,int,int,int,u32,int,int,int);
+void FUN_088ffcc0(char*offset,u32*src){u32 local[9],*s=(u32*)src[0],*d=local,*end=s+8;do{d[0]=s[0];d[1]=s[1];d[2]=s[2];d[3]=s[3];s+=4;d+=4;}while(s!=end);*d=*s;*(s16*)((char*)local+8)+=*(s16*)(offset+4);*(s16*)((char*)local+10)+=*(s16*)(offset+8);*(s16*)((char*)local+12)+=*(s16*)(offset+4);*(s16*)((char*)local+14)+=*(s16*)(offset+8);FUN_088ff8f0(D_09beb0bc,local,src[1],0,*(s16*)((char*)src+16),*(s16*)((char*)src+18),src[2],-1,-1,0);}

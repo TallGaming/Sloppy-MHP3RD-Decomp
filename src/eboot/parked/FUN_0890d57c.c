@@ -1,0 +1,4 @@
+/* FUN_0890d57c: measure a line list and derive its centered layout dimensions.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 4. Layout roles are hypotheses. */
+extern void *D_09be9f18;char *FUN_0880e4d4(char*,int);int FUN_088e95c4(void*,char*);int FUN_088e97a4(void*);
+void FUN_0890d57c(unsigned char *layout){short lines=0;char *text=(char *)layout+0x1c;int max=0,width,rounded;char *next;while((next=FUN_0880e4d4(text,10))!=0){int current;lines++;current=FUN_088e95c4(D_09be9f18,text);text=next+1;if(max<current)max=current;}width=FUN_088e97a4(D_09be9f18);if(max<width)max=width;width=max*7-7;*(short *)(layout+0x10)=lines<<4;rounded=(width/14)*14;*(short *)(layout+10)=rounded;if(width!=rounded)*(short *)(layout+10)=rounded+14;*(short *)(layout+0x14)=0x3c;*(short *)(layout+0x12)=0xf0-(short)((max*7)/2);}

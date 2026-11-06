@@ -22,13 +22,17 @@ hashes are not rewritten to manufacture new validation claims.
 The [initial publication checks](PUBLICATION_CHECK.md) record the original
 clean-tree test, content scan and Git review.
 
-## 2026-11-06 campaign update
+## 2026-11-06 source publication
 
-The [campaign inventory](../../campaign-source-export/LIBRARY.json) records
-all 1,077 function outcomes and links the archived source files with their
-SHA-256 hashes. The archive contains all 22 verified C sources from the
-campaign and 486 reviewed parked drafts. The remaining 26 parked functions
-appear in the inventory with their drafts kept local. Parked drafts may depend
-on local headers or incomplete types. The private build configuration, game inputs
-and third-party library implementations remain local. See
-[current status](../CURRENT_STATUS.md) for verification and coverage.
+The [source tree](../../src/) contains all 843 verified C files, reviewed parked
+drafts and an address-only symbol map. The [EBOOT index](../../src/eboot/INDEX.json)
+records 1,990 parked entries and 264 library identifications. Sixteen parked
+entries have metadata only. The private build configuration, game inputs and
+third-party library implementations remain local.
+
+The [campaign inventory](../../campaign-source-export/LIBRARY.json) still
+records all 1,077 campaign outcomes. Its source links now point into the main
+source tree, including all 22 campaign matches and 504 parked entries. One
+previously archived draft, `FUN_0880ea5c`, is metadata-only in the current tree
+pending source-provenance review. See [current status](../CURRENT_STATUS.md)
+for verification and coverage.

@@ -1,0 +1,19 @@
+/*
+ * FUN_0889c088: clear 16 bytes.
+ *
+ * Main EBOOT, match slice 5 (tiny functions that call others). Names and types are hypotheses.
+ */
+
+typedef signed char s8;
+typedef unsigned char u8;
+typedef short s16;
+typedef unsigned short u16;
+typedef int s32;
+typedef unsigned int u32;
+
+void *FUN_088ebb10(void *dst, s32 value, u32 size); /* Hypothesis: memset-like */
+
+void FUN_0889c088(void *rec)
+{
+    FUN_088ebb10(rec, 0, 16);
+}

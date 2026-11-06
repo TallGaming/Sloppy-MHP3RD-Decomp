@@ -1,0 +1,3 @@
+/* Evaluate every encoded channel and store its scaled value. */
+typedef unsigned int u32;typedef unsigned short u16;typedef unsigned char u8;extern float D_08967330,D_08967334,D_08967338,D_0896733c,D_08967340;extern u8 D_089d0c24[];float FUN_0889ee28(float,u16*,void*);
+void FUN_0889ef0c(u32*out,short input){u16*p=(u16*)out[0];u32 count,i=0,index;float v;if(p&&(count=*p)!=0){p+=2;do{index=D_089d0c24[*p];v=FUN_0889ee28((float)input,p,(char*)out+index*2+4);if((*p&0x38)!=0)out[index+0x18]=*(u32*)&(float){v*D_08967330*D_08967334*D_08967338};else if((*p&0xe00)==0)out[index+0x18]=*(u32*)&(float){v*D_08967340};else out[index+0x18]=*(u32*)&(float){v*D_0896733c};i++;p=(u16*)((char*)p+*(int*)(p+2));}while(i!=count);}}

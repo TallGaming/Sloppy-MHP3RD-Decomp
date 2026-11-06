@@ -1,0 +1,3 @@
+/* Compute two directional coefficients for a selected effect record. PARKED: scalar draft. */
+typedef struct{float x,y,z,w;} Vec4;extern void*D_08a29198;extern float D_089672ec;int FUN_0889c9a8(char*,int,int);unsigned int*FUN_0889c3bc(char*,int);void FUN_08829eb4(void*,Vec4*);
+void FUN_0889cd78(char*obj,char*ctx,int index){char*data=*(char**)(obj+4),*state=*(char**)(ctx+0x58);char*dst=data+*(int*)(data+0x20)+index*0x30;int r=FUN_0889c9a8(data,index,0);unsigned int kind=*(unsigned char*)(*(unsigned short*)(r+2)*2+data+*(int*)(data+0x2c)+1);Vec4 origin;float*pair;FUN_08829eb4(D_08a29198,&origin);pair=(float*)(state+kind*0x280+0xd0);*(float*)(dst+0x18)=pair[0]+D_089672ec;*(float*)(dst+0x1c)=pair[4]+D_089672ec;}

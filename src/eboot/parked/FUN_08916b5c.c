@@ -1,0 +1,4 @@
+/* FUN_08916b5c: select a weighted eligible entry from a sentinel table.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 6. Entry roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;extern void *D_09bb7b60;short *FUN_0891d510(void);int FUN_088bea68(void*,int);
+int FUN_08916b5c(u8 *owner,unsigned int random){short *base=FUN_0891d510();int total=0,index=0,accum=0;short *entry=base;if(base[2]==-1)return -1;do{if((signed char)entry[4]>0&&(index!=(signed char)owner[0xa9]||(signed char)entry[4]>1)&&FUN_088bea68(D_09bb7b60,(signed char)entry[1])!=0)total+=entry[0];index++;entry+=0x1a;}while(entry[2]!=-1);if(total==0||base[2]==-1)return -1;index=0;entry=base;do{if((signed char)entry[4]>0&&((signed char)owner[0xa9]!=index||(signed char)entry[4]>1)&&FUN_088bea68(D_09bb7b60,(signed char)entry[1])!=0){accum+=entry[0];if((int)((random&0xffff)%total)<accum)return (short)index;}index++;entry+=0x1a;}while(entry[2]!=-1);return -1;}

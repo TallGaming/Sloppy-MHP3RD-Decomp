@@ -1,0 +1,4 @@
+/* FUN_0890d8b8: initialize a text-layout record from one of two resource paths.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 4. Resource roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;extern void *D_08aace80,*D_08a3345c;void FUN_0890d564(void);int FUN_08867d40(void*,int);int FUN_0885bc0c(void*,u8,u16);void FUN_0880e1d4(void*,int,int);void FUN_0890d57c(void*);
+void FUN_0890d8b8(u8 *layout,short resource,u8 *descriptor,int value){int first,second;FUN_0890d564();if((signed char)descriptor[1]=='e'){first=FUN_08867d40(D_08aace80,resource+0x32d);second=FUN_08867d40(D_08aace80,(descriptor[2]&0xf)+0x799);FUN_0880e1d4(layout+0x1c,first,second);FUN_0890d57c(layout);*(int *)(layout+0x18)=value;return;}first=FUN_08867d40(D_08aace80,resource+0x32d);second=FUN_0885bc0c(D_08a3345c,descriptor[1],*(u16 *)(descriptor+2));FUN_0880e1d4(layout+0x1c,first,second);FUN_0890d57c(layout);*(int *)(layout+0x18)=value;return;}

@@ -1,0 +1,5 @@
+/* FUN_08905544: assemble and submit the first global UI layout.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 2. UI roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;extern void *D_08aace80,*PTR_DAT_089697ec,*PTR_DAT_089697f0;extern u16 *PTR_DAT_089697f4;extern int D_089697f8,PTR_LAB_0896b368;int FUN_08867d40(void*,int);void FUN_0880e1d4(void*,int,int);void FUN_08900fc0(int,void*,int,int,int);
+typedef struct{void *a;void *b;u16 *bounds;int d;void *inner;u8 *text;signed char width,height;u8 z1,pad;int z3;u8 z2;} LayoutA;
+void FUN_08905544(int owner){LayoutA layout;u8 buffer[44];int handle;layout.a=PTR_DAT_089697ec;layout.b=PTR_DAT_089697f0;layout.bounds=PTR_DAT_089697f4;layout.d=D_089697f8;handle=FUN_08867d40(D_08aace80,0x25);FUN_0880e1d4(buffer,handle,*(int *)((u8*)D_08aace80+0x5d484));layout.width=(signed char)layout.bounds[2]-(signed char)layout.bounds[0];layout.height=(signed char)layout.bounds[3]-(signed char)layout.bounds[1];layout.z1=0;layout.z2=0;*(void ***)(layout.bounds+0x10)=&layout.inner;layout.inner=&PTR_LAB_0896b368;layout.z3=0;layout.text=buffer;FUN_08900fc0(owner,&layout,0,0,0);}

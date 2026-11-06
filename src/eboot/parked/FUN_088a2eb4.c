@@ -1,0 +1,3 @@
+/* Initialize a 29-word controller descriptor and map its mode mask. */
+typedef unsigned int u32;typedef unsigned char u8;extern char D_089673dc[];void FUN_0880c468(void*,int,int);
+void FUN_088a2eb4(u32*p,u8 mode,int a,int b,u32 x,u32 y,u32 z){FUN_0880c468(p,0,0x40);p[0]=0x40;p[1]=((u8*)p)[0x75];p[3]=0x2a;p[4]=0x2c;p[5]=0x2b;p[2]=((u8*)p)[0x76];p[6]=0x29;p[0xc]=1;p[0x11]=0;p[0xd]=(u32)(p+0x10);p[0x15]=z;p[0x12]=((u8*)p)[0x77];p[0x16]=1;p[0x10]=1;p[0x13]=0;p[0x17]=a?a:(u32)D_089673dc;p[0x18]=b?b:(u32)D_089673dc;p[0x19]=y;p[0x1a]=x;p[0x1b]=0;p[0x1c]=0;switch(mode){default:p[0x14]=0;break;case 1:p[0x14]=0xdf00;break;case 2:p[0x14]=0xdf0f;break;case 3:p[0x14]=0x101;break;case 4:p[0x14]=1;break;case 5:p[0x14]=0xf;}}

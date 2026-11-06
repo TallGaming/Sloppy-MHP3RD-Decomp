@@ -1,0 +1,4 @@
+/* FUN_08956c88: allocate, clear, and register a type-1 tracked object.
+ * Main EBOOT, attempt-high-01 medium batch 21. Object role is a hypothesis. */
+typedef unsigned int u32;extern void *D_09bf5260;extern int PTR_DAT_0896b4b8;void *FUN_08878c28(void*,int,int);void *FUN_09c01d70(int,void*);void FUN_09c02058(void*);
+void *FUN_08956c88(unsigned char *owner){void *storage;u32 *object=0;storage=FUN_08878c28(D_09bf5260,0xa0,0x10);if(storage!=0){object=FUN_09c01d70(0xa0,storage);FUN_09c02058(object);u32 serial=*(u32 *)(owner+0x28);object[0x1c]=0;object[0x1d]=0;object[0x1e]=0;object[0x1f]=0;*(u32 *)(owner+0x28)=serial+1;object[0x20]=0;object[0x21]=0;object[0x22]=0;object[0x23]=0;object[0]=(u32)&PTR_DAT_0896b4b8;((unsigned char*)object)[0x94]=1;object[12]=(serial&0xffffff)|0x01000000;((unsigned char*)object)[0x95]=0;object[0x24]=0;}return object;}

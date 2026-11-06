@@ -1,0 +1,3 @@
+/* Allocate a resource slot and publish its asynchronous request handle. */
+typedef unsigned int u32;extern char*D_09bb7bc4;extern void*D_09beb090;void*FUN_08878c28(void*,int,int);void FUN_08878e64(void*);void FUN_088ef750(void*,int,u32,int);u32 FUN_088ef960(void*,int);
+void FUN_088a17d4(char*p,int size,u32 tag){char*base=D_09bb7bc4;void*mem=0;int i=0,*slot;if(size>0){*(int*)(p+0x278)=size;mem=FUN_08878c28(base+4,size,0x10);if(mem){slot=(int*)(base+0x843130);while(i<0x100&&slot[0]!=-1){i++;slot+=3;}if(i<0x100){slot[2]=size;slot[0]=2;slot[1]=(int)mem;}else{FUN_08878e64(base+4);mem=0;}}*(void**)(p+0x280)=mem;*(u32*)(p+0x27c)=0;}*(u32*)(p+0x284)=tag;FUN_088ef750(D_09beb090,5,tag,-1);*(u32*)(p+0x28c)=FUN_088ef960(D_09beb090,5);*(u32*)(p+0x288)=0;}

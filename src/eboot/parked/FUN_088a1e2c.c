@@ -1,0 +1,3 @@
+/* Release the extended resource records and restore the owning offset. */
+void FUN_08878e64(void*,void*);void FUN_0889c050(void*);void FUN_08878f78(void*);void FUN_0889c088(void*);void FUN_088a12b4(void*,void*);
+void FUN_088a1e2c(char*owner,char*base){void*h=*(void**)(base+0xf4c);if(h){if(*(char*)(*(unsigned short*)(base+0x60)*0x48+owner+0xe8)==1)*(int*)(owner+0x270)-=0x3400;FUN_08878e64(owner,h);*(void**)(base+0xf4c)=0;}FUN_0889c050(base+0xf40);if(*(void**)(base+0x13b8)){FUN_08878e64(owner,*(void**)(base+0x13b8));*(void**)(base+0x13b8)=0;}FUN_08878f78(base+0x1360);if(*(void**)(base+0x13e4)){FUN_08878e64(owner,*(void**)(base+0x13e4));*(void**)(base+0x13e4)=0;}FUN_0889c088(base+0x13e0);FUN_088a12b4(owner,base);}

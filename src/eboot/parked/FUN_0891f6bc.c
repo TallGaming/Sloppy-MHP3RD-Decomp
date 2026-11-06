@@ -1,0 +1,4 @@
+/* FUN_0891f6bc: initialize one menu state from the active global selection.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 10. Menu roles are hypotheses. */
+typedef unsigned char u8;extern void *D_08aace80;extern int PTR_DAT_08a0a9f8;int FUN_0886a58c(void*);void FUN_08902e04(void*,void*,int);void FUN_088f9ce4(void*,int);void FUN_089030a8(void*,int,int,int,int);void FUN_0891f02c(void*,int,int,int,int,int);void FUN_0891f064(void*,int);
+int FUN_0891f6bc(u8 *state){u8 value;if(FUN_0886a58c(D_08aace80)==0)return 0;state[0x1c5]=8;state[0x15]=2;state[0x1c0]=0;state[0x1c1]=0;state[0xc]=0;*(unsigned short *)(state+0x10)=0;state[0xd]=0;state[0x735]=0;state[0x734]=0;FUN_08902e04(state+0x738,&PTR_DAT_08a0a9f8,0);FUN_088f9ce4(state+0x738,0);FUN_089030a8(state+0x788,0,0,1,1);value=FUN_0886a58c(D_08aace80);state[0x735]=value>>3;state[0x734]=value;if((value&7)==0)state[0x735]=(value>>3)-1;FUN_0891f02c(state,0,-1,0,0,0);FUN_0891f064(state,-1);return 1;}

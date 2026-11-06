@@ -11,7 +11,8 @@ The [campaign inventory](campaign-source-export/LIBRARY.json) records 596
 completed functions out of 1,077. The completed set includes 22 verified C
 matches, 62 verified library identifications and 512 parked functions. The audit
 verified timing for 558 attempts and recorded waivers for 38. There are 481
-untouched functions.
+untouched functions. The [source tree](src/) contains all 843 verified C files
+and the reviewed parked drafts.
 
 The private main gate rebuilt the EBOOT byte for byte with 843 credited C
 functions. The required negative checks passed and the gate reported zero

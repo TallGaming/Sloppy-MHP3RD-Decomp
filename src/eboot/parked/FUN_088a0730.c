@@ -1,0 +1,3 @@
+/* Compose a selected transform and store its translated position. */
+typedef unsigned int u32;typedef unsigned char u8;char*FUN_0889fbd0(void*,u8);void FUN_088759ec(float*,void*,void*);void FUN_0887799c(u32,u32,u32,void*);void FUN_08875ee8(u32,u32,u32,void*);void FUN_08875a78(void*,void*,void*);
+void FUN_088a0730(void*ctx,char*out,u8 key,void*arg,u32*a,u32*b){char*p=FUN_0889fbd0(ctx,key);float x=*(float*)(p+0x30),y=*(float*)(p+0x34),z=*(float*)(p+0x38),v[3];FUN_088759ec(v,arg,p);x+=v[0];FUN_0887799c(b[0],b[1],b[2],out);FUN_08875ee8(a[0],a[1],a[2],out);FUN_08875a78(out,out,p);*(float*)(out+0x38)=z+v[2];*(float*)(out+0x30)=x;*(float*)(out+0x34)=y+v[1];}

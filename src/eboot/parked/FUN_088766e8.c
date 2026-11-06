@@ -1,0 +1,2 @@
+/* Purpose: linearly interpolate three values from a keyed table. */
+void FUN_088766e8(float key,float*table,float*x,float*y,float*z){float*row=table;while(row[0]>=0.0f){while(row[0]<=key){float*next=row+4;if(key<=next[0]){float t=(key-row[0])/(next[0]-row[0]);*x=row[1]+t*(next[1]-row[1]);*y=row[2]+t*(next[2]-row[2]);*z=row[3]+t*(next[3]-row[3]);return;}row=next;if(row[0]<0.0f)break;}break;}*x=row[1];*y=row[2];*z=row[3];}

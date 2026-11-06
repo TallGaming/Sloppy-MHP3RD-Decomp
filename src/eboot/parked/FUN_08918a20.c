@@ -1,0 +1,5 @@
+/* FUN_08918a20: return the maximum mapped value for a primary table group.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 7. Table roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;typedef unsigned int u32;extern u32 *D_08a3387c;extern u16 D_09d7c270[];int *FUN_0891dc58(void);u8 *FUN_0891d510(int);
+static u32 map_primary(int offset,int group){return ((u32 (*)(void*,u16))(*(u32 *)(D_08a3387c[0]+0x14)))(D_08a3387c,D_09d7c270[offset*4+group]);}
+u32 FUN_08918a20(int owner,signed char mode,int group){int *primary=FUN_0891dc58();u32 best=0,value;if(mode==0){if(primary[0]!=-1){value=map_primary(primary[0],group);if(value!=0xffff)best=value;}u8 *record=FUN_0891d510(owner);int index=*(short *)(record+4);short *next=(short *)(record+0x38);while(index!=-1){value=map_primary(index,group);if(value!=0xffff&&best<value)best=value;index=*next;next+=0x1a;}return best;}if(mode==1&&primary[1]!=-1){value=map_primary(primary[1],group);if(value!=0xffff)return value;}return 0;}

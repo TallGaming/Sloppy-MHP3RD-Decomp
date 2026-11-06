@@ -1,0 +1,4 @@
+/* FUN_08926eec: populate menu entries and set their disabled states.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 12. Menu roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;extern void *D_08aace80;int FUN_08867d40(void*,int);int FUN_08926a6c(void*);u8 FUN_0891f6a4(void*,int,int);int FUN_08926d54(void*);u8 *FUN_0886cae0(void*,int);int FUN_08922528(void*,u16);
+void FUN_08926eec(u8 *state,signed char fixed){int i=0;u8 *entry=state+0x1d8;if((signed char)state[0xc]>0)do{*(int *)entry=FUN_08867d40(D_08aace80,(i+0x9c)&0xffff);if(FUN_08926a6c(state)==0){entry[5]=1;entry[4]=10;}else if(fixed==0){entry[5]=1;entry[4]=FUN_0891f6a4(state,i,(signed char)state[0xd]);}else{entry[5]=0;entry[4]=0;if(i==1&&FUN_08926d54(state)==0){entry[5]=1;entry[4]=10;}else if(i==2){u8 *source=FUN_0886cae0(D_08aace80,0);if(FUN_08922528(state,*(u16 *)(source+(signed char)state[0x4be]*4))==0){entry[5]=1;entry[4]=10;}}}i++;entry+=12;}while(i<(signed char)state[0xc]);}

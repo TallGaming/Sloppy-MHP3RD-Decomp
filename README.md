@@ -2,9 +2,11 @@
 
 We are working toward readable source that rebuilds **Monster Hunter Portable
 3rd, Japanese PSP release ULJM05800 v1.02**, byte for byte. The matching
-campaign is paused after completing 596 of 1,077 function attempts. The
-[campaign inventory](campaign-source-export/LIBRARY.json) records every function
-and links the published source.
+campaign is paused after completing 596 of 1,077 function attempts.
+
+Browse the [source tree](src/) for all 843 verified C sources and the parked
+drafts. The [EBOOT source index](src/eboot/INDEX.json) covers the full checkpoint.
+The [campaign inventory](campaign-source-export/LIBRARY.json) tracks the paused queue.
 
 Project repository: [TallGaming/Sloppy-MHP3RD-Decomp](https://github.com/TallGaming/Sloppy-MHP3RD-Decomp).
 

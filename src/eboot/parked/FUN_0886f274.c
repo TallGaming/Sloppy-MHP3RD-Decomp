@@ -1,0 +1,2 @@
+/* Purpose: test whether one record is eligible under current subsystem state. */
+extern int FUN_088be1e4(void*);extern int FUN_0890681c(void*,int);unsigned int FUN_0886f274(void*o,void*r){void*g=*(void**)0x09bc1ed8;if((*(unsigned int*)((unsigned char*)o+0x60474)&1)==0&&FUN_088be1e4(*(void**)0x09bb7b60)==1&&(FUN_0890681c(r,1)!=0||(FUN_0890681c(r,2)!=0&&(*(unsigned int*)((unsigned char*)g+0x10fa354)&1)==0)))return 1;return 0;}

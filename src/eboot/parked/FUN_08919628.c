@@ -1,0 +1,4 @@
+/* FUN_08919628: scan all sentinel lists and retain two maximum mapped values.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 8. Mapping roles are hypotheses. */
+typedef unsigned short u16;typedef unsigned int u32;extern u32 *D_08a3387c;u16 *FUN_0891d4c0(void*,signed char);int FUN_088552b4(int);int FUN_088f20f8(int);
+void FUN_08919628(unsigned char *owner){int i;u16 *entry;signed char group=0;for(i=0;i<2;i++){*(u32 *)(owner+0x60+i*4)=0;*(u32 *)(owner+0x68+i*4)=0;}while((entry=FUN_0891d4c0(owner,group))!=0){if(entry[0]!=0xffff){u16 value=entry[0];unsigned char *out=owner;do{u32 (*map)(void*,int)=(void*)*(u32 *)(D_08a3387c[0]+0x14);u32 a,b;entry+=0x18;a=map(D_08a3387c,FUN_088552b4(value&0xff));map=(void*)*(u32 *)(D_08a3387c[0]+0x14);b=map(D_08a3387c,FUN_088f20f8(value&0xff));if(*(u32 *)(out+0x60)<a)*(u32 *)(out+0x60)=a;if(*(u32 *)(out+0x68)<b)*(u32 *)(out+0x68)=b;value=entry[0];out+=4;}while(value!=0xffff);}group++;}}

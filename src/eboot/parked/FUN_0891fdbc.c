@@ -1,0 +1,4 @@
+/* FUN_0891fdbc: create and validate a relationship between two selected slots.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 10. Relationship role is a hypothesis. */
+typedef unsigned char u8;typedef unsigned short u16;extern void *D_08aace80,*D_08ab1568;short *FUN_0886cae0(void*,signed char);int FUN_0887dd58(void*,int,int,int,int,int);int FUN_0887dde0(void*,int,int,int);
+int FUN_0891fdbc(u8 *state,signed char first,signed char second){short *a,*b;int relation;if(second!=-1&&first!=-1&&second!=first&&(a=FUN_0886cae0(D_08aace80,first),a[1]!=0)){b=FUN_0886cae0(D_08aace80,second);relation=FUN_0887dd58(D_08ab1568,b[0],a[0],0,0,0);*(int *)(state+0x634)=relation;if(relation!=0){if(FUN_0887dde0(D_08ab1568,relation,0,0)==0){*(u16 *)(state+0x63a)=0xffff;return 1;}*(u16 *)(state+0x63a)=*(u16 *)(*(int *)(state+0x634)+2);return 1;}}return 0;}

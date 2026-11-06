@@ -1,0 +1,21 @@
+/*
+ * FUN_08826c34: forward the call to FUN_08828d38 (tail call, arguments unchanged).
+ *
+ * Main EBOOT, match slice 1 (tiny functions). Names and types are
+ * hypotheses unless stated.
+ */
+
+typedef signed char s8;
+typedef unsigned char u8;
+typedef short s16;
+typedef unsigned short u16;
+typedef int s32;
+typedef unsigned int u32;
+
+/* Hypothesis: the callee's parameters are unknown; they pass through unchanged. */
+void FUN_08828d38();
+
+void FUN_08826c34(void)
+{
+    FUN_08828d38();
+}

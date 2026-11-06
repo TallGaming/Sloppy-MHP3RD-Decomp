@@ -1,0 +1,4 @@
+/* FUN_0890f668: start an owned effect and invoke its update method.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 5. Effect roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned int u32;extern void *D_09bf5260,*D_09bc1ed8;int FUN_09c01fd4(void);int FUN_08955784(void*,int,int,int);void FUN_09c01c4c(int,void*);u32 FUN_088e62f0(void*,int);
+void FUN_0890f668(u32 *state){int object;void (*update)(void*);if((state[0x12]&8)!=0||(state[0x12]&2)!=0||FUN_09c01fd4()==0){state[0x17]=0x20;state[0x18]=1;return;}object=FUN_08955784(D_09bf5260,1,1,(state[0x12]&7)>>2);state[0x16]=object;if(object==0){state[0x17]=0x20;state[0x12]&=0xffffffef;state[0x18]=1;return;}((u8*)state)[0x55]=1;FUN_09c01c4c(object,state);update=*(void (**)(void*))(*(u32 *)state+0x1c);*(float *)(state+0x24)=(float)(FUN_088e62f0(D_09bc1ed8,1)%0x168);update(state);state[0x18]=1;state[0x17]=0x1c;}

@@ -1,0 +1,2 @@
+/* Purpose: copy each node matrix, update it, and recurse through the tree. */
+extern void FUN_0889ed0c(void*);void FUN_088805e4(unsigned char*node){while(node){unsigned int*in=(unsigned int*)(node+0x1b0),*out=(unsigned int*)(node+0x240);int i;for(i=0;i<9;i++)out[i]=in[i];FUN_0889ed0c(node+0x1e0);if(*(void**)(node+0x14c))FUN_088805e4(*(unsigned char**)(node+0x14c));node=*(unsigned char**)(node+0x148);}}

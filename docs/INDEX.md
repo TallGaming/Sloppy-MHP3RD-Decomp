@@ -10,6 +10,8 @@ The pages below preserve authored research history. Their dated local results ar
 - [HELP_WANTED.md](HELP_WANTED.md)
 - [REPRODUCIBILITY.md](REPRODUCIBILITY.md)
 - [THIRD_PARTY_REFERENCES.md](THIRD_PARTY_REFERENCES.md)
+- [Source tree](../src/)
+- [EBOOT source index](../src/eboot/INDEX.json)
 - [Campaign inventory](../campaign-source-export/LIBRARY.json)
 - [Publication contents](publication/README.md)
 - [Initial publication checks](publication/PUBLICATION_CHECK.md)

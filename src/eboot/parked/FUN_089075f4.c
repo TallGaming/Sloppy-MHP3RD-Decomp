@@ -1,0 +1,4 @@
+/* FUN_089075f4: clamp a progress value and update global threshold state.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 3. Progress roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;typedef unsigned int u32;extern u8 *D_08aace80;extern u8 D_089fd5d4[];u32 FUN_08906bb4(void*);u32 FUN_0890642c(void*);
+int FUN_089075f4(u8 *record,int delta){u16 old;u32 before,after,index;int value;if(delta>0xffff)delta=0xffff;old=*(u16 *)(record+6);before=FUN_08906bb4(record);value=delta+old;if(value<7001){if(value>=0)*(u16 *)(record+6)=value;else*(u16 *)(record+6)=0;}else*(u16 *)(record+6)=7000;after=FUN_08906bb4(record);if(before<after){index=FUN_0890642c(record);*(u32 *)(D_08aace80+0x5eaec)|=1u<<(index&31);D_08aace80[index+0x5eabe]|=D_089fd5d4[FUN_08906bb4(record)*3];}if(delta>0&&*(u16 *)(record+6)==7000)return 0x100;return *(u16 *)(record+6)>old?8:0;}

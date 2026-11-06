@@ -1,0 +1,3 @@
+/* Update an object's active effect through its virtual interface. */
+typedef void*(*Get)(void*);typedef void(*Act)(void*);extern void FUN_08879ad0(void*),FUN_088795fc(void*),FUN_08879d5c(void*,float*,void*),FUN_0887956c(void*,void*),FUN_08879bf4(void*);int FUN_0889fc9c(void*,int);
+void FUN_088a0d68(int*p){Get get=*(Get*)(*p+0x44);char*o=get(p);if(*(int*)(o+0x48)>0){o=get(p);*(int*)(o+0x48)=*(int*)((char*)get(p)+0x48)-1;return;}FUN_08879ad0(get(p));FUN_088795fc(get(p));if(!FUN_0889fc9c(p,0x20000)){float v[3];(*(Act*)(*p+0x38))(p);FUN_08879d5c(get(p),v,p+4);((float*)p)[0x20]+=v[0];((float*)p)[0x21]+=v[1];((float*)p)[0x22]+=v[2];}FUN_0887956c(get(p),((Get)(*(void**)(*p+0x20)))(p));FUN_08879bf4(get(p));}

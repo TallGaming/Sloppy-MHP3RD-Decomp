@@ -1,0 +1,2 @@
+/* Purpose: find an ordered pair record in fixed relationship tables. */
+short*FUN_0887dd58(void*unused,short a,short b){int low=a,high=b,i;unsigned char*counts=(unsigned char*)0x089ca350;short*records;(void)unused;if(high<low){low=b;high=a;}if(counts[low*2]==0)return 0;records=(short*)(0x089caaf8+counts[low*2+1]*10);for(i=0;i<counts[low*2];i++,records+=5)if(records[0]==high)return records;return 0;}

@@ -1,0 +1,3 @@
+/* Poll the input backend and publish a newly active controller. */
+extern char*D_08aace80;extern char*D_08a33464;extern char*D_09c47bb8;int FUN_08961020(void);void FUN_08960fb8(int);void FUN_08960fb0(void);void FUN_088a2dc0(void*);void FUN_08861ea0(void*,int,int);
+void FUN_088a306c(char*p){int state;if(p[0x74]){state=FUN_08961020();if(state==2)FUN_08960fb8(2);else if(state==3)FUN_08960fb0();else if(state==0)FUN_088a2dc0(p);if((*(unsigned int*)(D_08aace80+0x60474)&1)&&*D_09c47bb8&&D_08a33464[0x25]!=(char)0xc0&&(*(int*)(D_08a33464+0x18)==0||*(int*)(D_08a33464+0x18)==4)){FUN_08861ea0(D_08a33464,1,1);D_08a33464[0x25]=0xc0;}}}

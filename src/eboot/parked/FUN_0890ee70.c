@@ -1,0 +1,4 @@
+/* FUN_0890ee70: compute one output float from status flags and a four-word input.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 5. Status roles are hypotheses. */
+typedef unsigned short u16;typedef unsigned int u32;extern void *D_09c47be0,*D_09bb7e90;extern unsigned char *D_08aace80;extern float D_089698e0;int FUN_088cca4c(void*);void FUN_09c19408(void*,void*,int,int,void*,int,int,void*,int);
+void FUN_0890ee70(unsigned char *object,u32 *input,float *out){u32 local[4]={input[0],input[1],input[2],input[3]};u16 flags=*(u16 *)(*(int *)(object+0xc)+0x130);int value;if((flags&0x406)!=0){value=FUN_088cca4c(D_09bb7e90);FUN_09c19408(D_09c47be0,local,value,0,0,0xffff,2,out,0);*out+=D_089698e0;return;}if((flags&0x1220)==0&&((flags&0x4000)==0||(*(u32 *)(D_08aace80+0x60474)&1)==0)){*out=*(float *)(*(int *)(object+0xc)+0xd8);return;}value=FUN_088cca4c(D_09bb7e90);FUN_09c19408(D_09c47be0,local,value,0,out,0xffff,2,0,0);}

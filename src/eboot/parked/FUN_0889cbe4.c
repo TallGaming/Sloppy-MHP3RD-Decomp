@@ -1,0 +1,3 @@
+/* Append a texture-state packet selected from one record's mode bits. */
+typedef unsigned int u32;extern u32*D_08a31e88;extern u32 D_089672e4,D_089672e8;u32*FUN_0889c3bc(int,int);
+void FUN_0889cbe4(int a,int unused,int index){u32*out=D_08a31e88,*rec,x=0,y=0,z=0;*out=0xc1000100;D_08a31e88=out+1;rec=FUN_0889c3bc(a,index);if((*rec&0x60)==0x20)x=D_089672e4;else if((*rec&0x60)==0x40)y=D_089672e4;else z=D_089672e4;D_08a31e88=out+11;out[1]=(x>>8)|0x63000000;out[7]=0xc0000002;out[2]=(y>>8)|0x64000000;out[3]=(z>>8)|0x65000000;out[4]=(z>>8)|0x66000000;out[5]=(x>>8)|0x67000000;out[6]=(y>>8)|0x68000000;out[8]=0x5f000001;out[9]=0x60000001;out[10]=(D_089672e8>>8)|0x5b000000;}

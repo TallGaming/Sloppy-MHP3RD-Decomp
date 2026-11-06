@@ -1,0 +1,3 @@
+/* Copy three saved player records into their runtime slots, then activate them. */
+typedef unsigned char u8;typedef unsigned int u32;void FUN_0880c088(void*,const void*,int);void FUN_0889111c(void*,void*,int);
+void FUN_088911dc(char*ctx){int i=0,off=0;char*slot=*(char**)(ctx+0x94c);char*dst=slot+0x800;do{char*save=*(char**)(ctx+0x6554);u8 active=*(u8*)(save+off+0x1012);i++;*(u8*)(slot+0x81a)=active;slot+=0x60000;if(active){FUN_0880c088(dst,save+off+0x1000,0x12);*(u8*)(dst+0x1b)=*(u8*)(save+off+0x1013);*(u32*)(dst+0x4898)=*(u32*)(save+off+0x4fc8);*(u32*)(dst+0x5cc28)=*(u32*)(save+off+0x6a250);}off+=0x6b100;dst+=0x60000;}while(i!=3);FUN_0889111c(ctx,*(void**)(ctx+0x94c),0);}

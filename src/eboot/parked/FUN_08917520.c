@@ -1,0 +1,5 @@
+/* FUN_08917520: return the maximum mapped value for a selected table group.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 6. Table roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;typedef unsigned int u32;extern u32 *D_08a3387c;extern u16 D_09d7c270[];u8 *FUN_0891d4c0(int,int);u8 *FUN_0891d510(int);u8 *FUN_0891dc58(void);
+static u32 map_value(int offset,int group){u16 key=D_09d7c270[offset*4+group];return ((u32 (*)(void*,u16))(*(u32 *)(D_08a3387c[0]+0x14)))(D_08a3387c,key);}
+u32 FUN_08917520(int owner,signed char mode,int group){u32 best=0,value;u8 *record;if(mode==0){record=FUN_0891d4c0(owner,0);if(record!=0&&*(short *)(record+0x30)!=-1){value=map_value(*(short *)(record+0x30),group);if(value!=0xffff)best=value;}record=FUN_0891d510(owner);int index=*(short *)(record+4);short *next=(short *)(record+0x38);while(index!=-1){value=map_value(index,group);if(value!=0xffff&&best<value)best=value;index=*next;next+=0x1a;}return best;}if(mode==1){record=FUN_0891dc58();value=map_value(*(int *)(record+4),group);if(value!=0xffff)return value;}return 0;}

@@ -1,0 +1,5 @@
+/* FUN_08905430: assemble a temporary UI descriptor and submit it.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 2. UI roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned short u16;extern void *D_08aace80;extern u8 D_089fafb4,D_089fafb6,D_089fafb8,D_089fafba;extern u16 D_089fb068,D_089fb06a,D_089fb06c,D_089fb06e;extern int PTR_LAB_0896b368,PTR_LAB_0896b3f8;extern void *D_089fafd4,*D_089faf8c,*D_089fb088;extern int D_089faf24;
+int FUN_08867d40(void*,int);void FUN_08901808(void*,int,int,int);void FUN_08901000(int,void*,int,int,int,int);
+void FUN_08905430(int owner,int value,short resource){void *outer;u8 text[16];void *inner;int handle;u8 width,height,zero1,zero2;int enabled;handle=FUN_08867d40(D_08aace80,resource+0x780);height=D_089fafba-D_089fafb6;width=D_089fafb8-D_089fafb4;inner=&PTR_LAB_0896b368;enabled=1;zero1=0;zero2=0;FUN_08901808(text,value,(short)(D_089fb06c-D_089fb068),(short)(D_089fb06e-D_089fb06a));outer=&PTR_LAB_0896b3f8;D_089fafd4=&inner;D_089faf8c=&outer;D_089fb088=text;(void)handle;(void)width;(void)height;(void)enabled;(void)zero1;(void)zero2;FUN_08901000(owner,&D_089faf24,10,0,0,0);}

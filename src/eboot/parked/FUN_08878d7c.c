@@ -1,0 +1,3 @@
+/* Purpose: split an allocator block and return the aligned payload. */
+extern int*FUN_08878d38(void*allocator,unsigned int units);
+void*FUN_08878d7c(void*allocator,int size,int alignment){unsigned int units=(alignment+size+0x2f)>>4;int*block,*split;int address;if(size==0)return 0;block=FUN_08878d38(allocator,units);if(!block)return 0;address=(((int)block+alignment-1+(block[4]*16-block[6])+0x20)&-alignment)-0x20;split=(int*)(address+(block[5]-units)*16);split[0]=block[0];if(split[0])*(int**)(split[0]+4)=split;split[5]=0;split[4]=units;split[6]=block[6]+(address-(int)block)-block[4]*16;split[3]=(int)block;block[5]-=units;split[1]=(int)block;block[0]=(int)split;split[2]=0;return split+8;}

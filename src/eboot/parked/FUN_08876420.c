@@ -1,0 +1,2 @@
+/* Purpose: move a wrapped 16-bit value toward a target by a bounded step. */
+unsigned int FUN_08876420(int*current,unsigned int*target,unsigned int step){unsigned int raw=*target;int base=*current;unsigned int distance=((unsigned short)raw-base)&0xffff;unsigned int reverse=distance>0x7fff;if(reverse)distance=(-distance)&0xffff;if(distance<step)step=distance;if(reverse)*current=base-step;else*current=base+step;*target=(unsigned short)raw;return step;}

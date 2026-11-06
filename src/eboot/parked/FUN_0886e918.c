@@ -1,0 +1,3 @@
+/* Purpose: store one three-byte component and update its presence flag. */
+#define F(b,t,o)(*(t*)((unsigned char*)(b)+(o)))
+void FUN_0886e918(void*unused,void*record,unsigned char*value,signed char component){unsigned int off=(unsigned char)(component*3);(void)unused;F(record,unsigned char,0x2a+off)=value[0];F(record,unsigned char,0x2a+((off+1)&255))=value[1];F(record,unsigned char,0x2a+((off+2)&255))=value[2];if(component==3){if(value[3]==0)F(record,unsigned int,0x28)&=~0x200u;else F(record,unsigned int,0x28)|=0x200;}else if(component==4){if(value[3]==0)F(record,unsigned int,0x28)&=~0x400u;else F(record,unsigned int,0x28)|=0x400;}}

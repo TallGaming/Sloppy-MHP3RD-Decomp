@@ -1,0 +1,3 @@
+/* FUN_088f2468: allocate and initialize an indexed memory-region descriptor. PARKED: one-word length delta retains thirteen differences. */
+typedef unsigned short u16;typedef unsigned char u8;typedef int(*Resolve)(void*,u16);extern void*D_08a3387c;
+int FUN_088f2468(u8*p,int n,u16 id){u16*d=(u16*)(p+n*12);d[0]=2;d[1]=id;if(n<2){*(int*)(d+2)=*(int*)(p+0x30)+n*0x180000;return*(int*)(d+2);}else{int size=((Resolve)(*(void***)D_08a3387c)[5])(D_08a3387c,id);int old=*(int*)(p+0x38);*(int*)(p+n*4+0x38)=size;*(int*)(d+2)=old;*(int*)(p+0x3c)-=size;*(int*)(p+0x38)+=size;*(int*)(d+4)=0;return*(int*)(d+2);}}

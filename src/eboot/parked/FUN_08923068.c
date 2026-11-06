@@ -1,0 +1,4 @@
+/* FUN_08923068: populate variable menu entries and their availability bytes.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 11. Menu roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned int u32;extern void *D_09e5e1a8;extern u8 *D_09bc1ed8;int FUN_09c9aba0(void*,int);u8 FUN_0891f6a4(void*,int,int);
+void FUN_08923068(u8 *state,signed char fixed){int i=0;u8 *entry=state+0x1d8;if((signed char)state[0xc]<1)return;state[0x1dd]=0;*(int *)entry=FUN_09c9aba0(D_09e5e1a8,0x268);while(1){if(fixed!=0)entry[4]=(i==2&&(*(u32 *)(D_09bc1ed8+0x10fa354)&1)==0)?10:0;else if(i==2&&(*(u32 *)(D_09bc1ed8+0x10fa354)&1)==0)entry[4]=10;else entry[4]=FUN_0891f6a4(state,i,(signed char)state[0xd]);i++;if((signed char)state[0xc]<=i)return;entry[0x11]=0;entry+=12;*(int *)entry=FUN_09c9aba0(D_09e5e1a8,(i-1+0x269)&0xffff);}}

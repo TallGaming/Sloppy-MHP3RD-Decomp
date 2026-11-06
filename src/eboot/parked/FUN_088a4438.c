@@ -1,0 +1,3 @@
+/* Select and store a three-byte color for one indexed entry. */
+typedef unsigned int u32;extern void*D_08aace80;extern void*D_08a3345c;extern unsigned char D_0897df84[];int FUN_08868e08(void*,u32);char*FUN_0885c3dc(void*,int,short);
+void FUN_088a4438(char*p,u32 index,int use){int id=FUN_08868e08(D_08aace80,index&255);char*rec=FUN_0885c3dc(D_08a3345c,id,*(short*)(p+id*0x10+0x492));char*out=p+index*4+0x460,*color=D_0897df84;if(use){color+=((unsigned char)rec[0x14])*3;if(*(short*)(p+index*2+0x4e6)==0){out[0]=p[0x454];out[1]=p[0x455];out[2]=p[0x456];return;}}out[0]=color[0];out[1]=color[1];out[2]=color[2];}

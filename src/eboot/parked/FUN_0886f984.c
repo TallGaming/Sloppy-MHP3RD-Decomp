@@ -1,0 +1,2 @@
+/* Purpose: lower the current priority when a requested value ranks earlier. */
+void FUN_0886f984(void*o,short v){short*list=(short*)0x089c763c;unsigned int a=0,b=0;if((*(unsigned int*)((unsigned char*)o+0x60474)&1)||list[0]==0)return;if(*(short*)((unsigned char*)o+0x60b90)!=list[0])while(list[++a]!=0&&list[a]!=*(short*)((unsigned char*)o+0x60b90));if(v!=list[0])while(list[++b]!=0&&list[b]!=v);if(b<a)*(short*)((unsigned char*)o+0x60b90)=v;}

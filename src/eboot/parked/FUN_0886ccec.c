@@ -1,0 +1,3 @@
+/* Purpose: copy the live state block into its snapshot area. */
+#define F(b,t,o)(*(t*)((unsigned char*)(b)+(o)))
+void FUN_0886ccec(void*object){unsigned int*i,*o;F(object,unsigned int,0x6047d)=F(object,unsigned int,0x5fbd4);F(object,unsigned int,0x60481)=F(object,unsigned int,0x5fbd8);F(object,unsigned int,0x60485)=F(object,unsigned int,0x5fbdc);F(object,unsigned char,0x60489)=F(object,unsigned char,0x5fbe0);F(object,unsigned char,0x6048a)=F(object,unsigned char,0x5fbe1);F(object,unsigned char,0x6048b)=F(object,unsigned char,0x5fbe2);i=(unsigned int*)((unsigned char*)object+0x5fbe4);o=(unsigned int*)((unsigned char*)object+0x6048c);while(i!=(unsigned int*)((unsigned char*)object+0x602d4)){o[0]=i[0];o[1]=i[1];o[2]=i[2];o[3]=i[3];i+=4;o+=4;}o[4]=i[0];o[5]=i[1];}

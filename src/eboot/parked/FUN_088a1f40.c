@@ -1,0 +1,3 @@
+/* Reset either one indexed resource row or the extended resource row. */
+typedef unsigned int u32;void FUN_08878e64();void FUN_0889c050(void*);void FUN_08878f78(void*);void FUN_0889c088(void*);
+void FUN_088a1f40(void*owner,char*base,u32 index){char*a;if((int)index<7){index&=255;a=base+index*0x30+0xdf0;if(*(void**)(a+0xc))FUN_08878e64();FUN_0889c050(a);FUN_08878f78(base+index*0x80+0xf70);FUN_0889c088(base+index*0x10+0x12f0);return;}if(*(void**)(base+0xf4c))FUN_08878e64();FUN_0889c050(base+0xf40);if(*(void**)(base+0x13b8))FUN_08878e64(owner);FUN_08878f78(base+0x1360);if(*(void**)(base+0x13e4))FUN_08878e64(owner);FUN_0889c088(base+0x13e0);}

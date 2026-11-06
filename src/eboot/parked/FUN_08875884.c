@@ -1,0 +1,2 @@
+/* Purpose: decode one variable-length record into a six-field output. */
+void FUN_08875884(void*unused,unsigned int*out,unsigned char*base,int record,int sub){int i;int*p=(int*)(base+0x10);(void)unused;for(i=0;i<record;i++)p=(int*)((unsigned char*)p+p[0]);out[1]=p[6];*((unsigned short*)out+4)=p[7];*((unsigned short*)out+5)=*((unsigned short*)p+15);out[0]=(unsigned int)(p+8);if(p[6]==1||p[6]==3||p[6]==8||p[6]==9||p[6]==10){out[3]=out[4]=out[5]=0;return;}p+=4;for(i=0;i<p[-2]+sub;i++)p=(int*)((unsigned char*)p+p[0]);out[3]=(unsigned int)(p+4);out[4]=p[2];out[5]=(short)p[3];}

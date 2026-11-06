@@ -1,0 +1,4 @@
+/* FUN_08917ea4: advance a six-state two-stage table operation.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 7. State roles are hypotheses. */
+typedef unsigned int u32;short *FUN_0891d4c0(void*,int);int FUN_0891d8f4(void*,void*,int);
+int FUN_08917ea4(u32 *state){int value=state[6];short *entry;switch(value){case 0:case 1:entry=FUN_0891d4c0(state,0);if(entry==0||entry[0]==-1)goto done;goto stage2;case 2:entry=FUN_0891d4c0(state,0);if(FUN_0891d8f4(state,entry,0)==0){state[6]=3;return 1;}stage2:state[6]=2;return 1;case 3:entry=FUN_0891d4c0(state,0);if(entry==0||entry[0x18]==-1)goto done;break;case 4:entry=FUN_0891d4c0(state,0);if(FUN_0891d8f4(state,entry+0x18,1)==0)goto done;break;case 5:state[6]=0;return 0;default:goto store;}value=4;store:state[6]=value;return 1;done:state[6]=5;return 1;}

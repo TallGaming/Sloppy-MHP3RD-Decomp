@@ -1,0 +1,4 @@
+/* FUN_089030a8: initialize a multi-part state record from global descriptors.
+ * Main EBOOT, attempt-high-01 241-512 byte batch 2. Descriptor roles are hypotheses. */
+typedef unsigned char u8;typedef unsigned int u32;extern u8 D_089fcc50[],D_089fcc78[],D_089fcc79[],D_089f9de4[];void FUN_08902e04(void*,void*,int);void FUN_088fb314(void*,int);void FUN_089029f4(void*);
+void FUN_089030a8(u32 *state,int kind,u8 value,u8 tail,signed char activate){int i;u8 *descriptor;u32 *part;state[0]=kind;state[1]=D_089fcc78[kind*2];((u8*)state)[0xc]=value;((u8*)state)[0x154]=tail;if(D_089fcc79[kind*2]!=0){descriptor=D_089fcc50+kind*4;i=0;part=state+4;do{FUN_08902e04(part,D_089f9de4+*descriptor*0x18,1);i++;part+=0x14;descriptor++;}while(i<(int)D_089fcc79[kind*2]);}if(activate==0)return;FUN_088fb314(state,0);FUN_089029f4(state);}

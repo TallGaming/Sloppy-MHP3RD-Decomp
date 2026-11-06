@@ -1,0 +1,3 @@
+/* Initialize an animation record and derive its per-step ratio. */
+typedef unsigned int u32;extern void*D_0896ac40;extern void*D_0896ac58;extern float D_089672f0,D_089672f4,D_089672f8,D_089672fc;void FUN_0889c050(void*);void FUN_08878f78(void*);void FUN_0889c088(void*);
+void FUN_0889dddc(u32*p){float n,q;p[0]=(u32)D_0896ac40;FUN_0889c050(p+0x14);p[0x24]=(u32)D_0896ac58;FUN_08878f78(p+0x24);*(float*)(p+0x27)=D_089672f0;if(p[0x2e]==1){n=(float)p[0x2f];q=n*D_089672f4+D_089672f4;if(q<D_089672f8)p[0x32]=(u32)q;else p[0x32]=(int)(q-D_089672f8)|0x80000000;if(!p[0x32]){p[0x32]=1;*(float*)(p+0x31)=n/D_089672fc;}else *(float*)(p+0x31)=n/(float)p[0x32];}FUN_0889c050(p+0x14);FUN_08878f78(p+0x24);FUN_0889c088(p+0x20);}

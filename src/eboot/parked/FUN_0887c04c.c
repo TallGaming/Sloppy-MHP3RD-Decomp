@@ -1,0 +1,3 @@
+/* Purpose: initialize callback slots and query network identity bytes. */
+extern void FUN_088ebb10(void*,int,unsigned int);extern void FUN_088ebb18(void*,const void*,unsigned int);extern void FUN_08961008(int,void*);extern void FUN_089611e8(void*);
+void FUN_0887c04c(void){unsigned char byte[4],identity[28];*(unsigned int*)0x08aad344=0xffffffff;FUN_088ebb10((void*)0x08aad304,0,0x40);FUN_08961008(8,byte);*(unsigned char*)0x08aad349=byte[0];FUN_08961008(9,byte);*(unsigned char*)0x08aad348=byte[0];FUN_089611e8(identity);FUN_088ebb10((void*)0x08aad350,0,0x80);FUN_088ebb18((void*)0x08aad350,identity,0x10);*(unsigned int*)0x08aad34c=0x10;}

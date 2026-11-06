@@ -7,7 +7,9 @@ This repository contains research tools and diagnostic source drafts, not a
 playable game, complete decompilation or native port.
 
 The 2026-11-06 campaign checkpoint is recorded in the
-[public function inventory](../campaign-source-export/LIBRARY.json).
+[campaign inventory](../campaign-source-export/LIBRARY.json). The
+[public source tree](../src/) contains the complete verified C set and the
+reviewed parked drafts.
 
 | Measure | Status |
 | --- | --- |

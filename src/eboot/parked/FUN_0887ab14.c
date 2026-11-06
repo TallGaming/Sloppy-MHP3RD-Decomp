@@ -1,0 +1,3 @@
+/* Purpose: open a handle through the active network backend. */
+extern int FUN_089611b0(unsigned int,unsigned int,int,int);extern int FUN_08961188(void);extern int FUN_08961060(unsigned int,unsigned int,int*,int,int);extern int FUN_08879f60(int);
+int FUN_0887ab14(unsigned int a,unsigned int b,short value){int local=value,status;if(*(unsigned int*)0x08aad03c!=1){status=FUN_089611b0(a,b,local,0);if(status<0){if(FUN_08961188()==-0x7ffefff5)return 0;}else{if(status!=0)return status;status=-0x7ffeff98;}return FUN_08879f60(status);}status=FUN_08961060(a,b,&local,0,1);if(status==-0x7fbef8f7)return 0;status=FUN_08879f60(status);return status<0?status:local;}
